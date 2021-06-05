@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid || Active Cases</title>
+  <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    body {
+      background: radial-gradient(#00A4CCFF, #F95700FF);
+      animation: animated 2s ease-in-out infinite alternate;
+    }
+
+    #customers td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+      background-color: grey;
+    }
+
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: black;
+      color: blueviolet;
+    }
+
+    .animated {
+      font-size: 80px;
+      color: mediumvioletred;
+      text-align: center;
+      animation: animated 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes animated {
+      from {
+        text-shadow: 0 0 10px #B14D2B, 0 0 20px #CA782C, 0 0 30px #F9D30E, 0 0 40px #F0B9CC, 0 0 50px #FFFFFF, 0 0 60px #C9E0C4, 0 0 70px #e60073;
+      }
+  </style>
+</head>
+
+<body>
+
+
+
+  <center>
+    <h1 class="animated"> Covid 19</h1>
+    <p>Api fetch</p>
+  </center>
+  <table id="customers">
+    <tr class="animation">
+
+      <th>State</th>
+      <th>Active</th>
+
+
+      {{!-- <th>Affected</th>
+      <th>Recover</th>
+      <th>Deaths</th>
+      <th>Vaccination</th> --}}
+    </tr>
+    <tbody>
+      {{#each stateData}}
+      <tr>
+
+        <td>{{state}}</td>
+        <td>{{active}}</td>
+
+        {{!-- <td>{{Affected}}</td>
+        <td>{{Recover}}</td>
+        <td>{{Deaths}}</td>
+        <td>{{Vaccination}}</td> --}}
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+
+
+
+</body>
+
+</html>
